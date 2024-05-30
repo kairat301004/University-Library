@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc; /* Добавляем рамку для таблицы */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.search-results {
+    border: 1px solid #ccc; /* Добавляем рамку для результатов поиска */
+    margin-top: 20px;
+    padding: 10px;
+}

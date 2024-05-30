@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление книгами в библиотеке</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Поисковик книг в библиотеке</h1>
+
+<h2>Названия книг:</h2>
+<ul>
+    <li th:each="title : ${bookTitles}" th:text="${title}"></li>
+</ul>
+
+<form th:action="@{/search}" method="get">
+    <input type="text" name="query" placeholder="Введите запрос">
+    <button type="submit">Поиск</button>
+</form>
+
+<h2>Результаты поиска:</h2>
+<table>
+    <tr>
+        <th>Название</th>
+        <th>Автор</th>
+    </tr>
+    <tr th:each="book : ${books}">
+        <td th:text="${book.title}">Название книги</td>
+        <td th:text="${book.author}">Автор</td>
+    </tr>
+</table>
+</body>
+</html>
